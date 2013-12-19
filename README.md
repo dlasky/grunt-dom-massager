@@ -83,7 +83,8 @@ An object containing valid selectors to be used for manipulation actions
   action:'attr' //cheerio action to perform
   input:['attrName'] //cheerio method arguments as array (optional)
   output:'dom.attrs.value' //grunt.config key to store any output values in
-}```
+}
+```
 
 ##### options.selectors.action
 Type: `String`

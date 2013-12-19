@@ -4,8 +4,7 @@
   "version": "0.1.0",
   "homepage": "https://github.com/dlasky/grunt-dom-massager",
   "author": {
-    "name": "Dan Lasky",
-    "email": "dan@tap.me"
+    "name": "Dan Lasky"
   },
   "repository": {
     "type": "git",

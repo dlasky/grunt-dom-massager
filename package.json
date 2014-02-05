@@ -1,7 +1,7 @@
 {
   "name": "grunt-dom-massager",
   "description": "Manipulate the dom using cheerio via grunt task",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/dlasky/grunt-dom-massager",
   "author": {
     "name": "Dan Lasky"

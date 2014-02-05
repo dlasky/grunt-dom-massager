@@ -18,6 +18,8 @@ module.exports = function(grunt) {
 
 		var options = this.options({
 			writeDom: false,
+			xmlMode: false,
+			normalizeWhitespace: false,
 			selectors:{},
 			cheerioHook:null
 		});
@@ -44,7 +46,10 @@ module.exports = function(grunt) {
 				var i,
 					opts,
 					output,
-					$ = cheerio.load(obj.html);
+					$ = cheerio.load(obj.html, {
+						xmlMode: options.xmlMode,
+						normalizeWhitespace: options.normalizeWhitespace
+					});
 				
 				for(i in options.selectors) {
 

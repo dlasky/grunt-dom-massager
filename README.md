@@ -72,6 +72,18 @@ Default value: `false`
 
 A boolean that determines if the dom manipulation should be saved to disk when completed.
 
+#### options.xmlMode
+Type: `Boolean`
+Default value: `false`
+
+Use XML mode for underlying parser. See [Cheerio Documentation](https://github.com/MatthewMueller/cheerio/blob/master/Readme.md) for more information.
+
+#### options.normalizeWhitespace
+Type: `Boolean`
+Default value: `false`
+
+Normalize whitespace in incoming file for parser (this can affect your output whitespace). See [Cheerio Documentation](https://github.com/MatthewMueller/cheerio/blob/master/Readme.md) for more information.
+
 #### options.selectors
 Type: `Object`
 Default value: `{}`

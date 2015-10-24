@@ -24,43 +24,45 @@ In your project's Gruntfile, add a section named `dom_massager` to the data obje
 
 ```js
 grunt.initConfig({
-read_test: {
-    options: {
-      writeDom: false,
-      selectors: {
-        ".read .classy": {
-          action: "html",
-          output: "dom.read.classy"
-        },
-        ".read #idface":{
-          action:"text",
-          output:"dom.read.idface"
+  dom_massager:{
+    read_test: {
+      options: {
+        writeDom: false,
+        selectors: {
+          ".read .classy": {
+            action: "html",
+            output: "dom.read.classy"
+          },
+          ".read #idface":{
+            action:"text",
+            output:"dom.read.idface"
+          }
         }
-      }
+      },
+      src:'test/fixtures/test.html'
     },
-    src:'test/fixtures/test.html'
-  },
-  write_test: {
-    options: {
-      writeDom:true,
-      selectors: {
-        ".write #deleteme": {
-          action:"remove"
-        },
-        ".write #after": {
-          action:"append",
-          input:["<a href='blah'></a>"]
-        },
-        ".write #before":{
-          action:"prepend",
-          input:["<a href='zappo'></a>"]
+    write_test: {
+      options: {
+        writeDom:true,
+        selectors: {
+          ".write #deleteme": {
+            action:"remove"
+          },
+          ".write #after": {
+            action:"append",
+            input:["<a href='blah'></a>"]
+          },
+          ".write #before":{
+            action:"prepend",
+            input:["<a href='zappo'></a>"]
+          }
         }
-      }
+      },
+      files: {
+        'tmp/': ['test/fixtures/test.html'],
+      },
     },
-    files: {
-      'tmp/': ['test/fixtures/test.html'],
-    },
-  },
+  }
 });
 ```
 

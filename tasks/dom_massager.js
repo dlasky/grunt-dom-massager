@@ -50,14 +50,15 @@ module.exports = function(grunt) {
 						xmlMode: options.xmlMode,
 						normalizeWhitespace: options.normalizeWhitespace
 					});
-				
+
 				for(i in options.selectors) {
 
 					opts = options.selectors[i];
 
 					if (opts && opts.action) {
 
-						output = $(i)[opts.action](opts.input);
+						var c = $(i);
+						output = c[opts.action].apply(c, opts.input);
 
 						if (opts.output) {
 							grunt.config.set(opts.output, output);
@@ -77,7 +78,7 @@ module.exports = function(grunt) {
 					grunt.log.writeln("Wrote file:" + f.dest + obj.file);
 				}
 
-			});
+			},this);
 
 		});
 	});

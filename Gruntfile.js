@@ -58,6 +58,22 @@ module.exports = function(grunt) {
 						".write #before":{
 							action:"prepend",
 							input:["<a href='zappo'></a>"]
+						},
+						".attr #1":{
+							action:"addClass",
+							input:["test test2"]
+						},
+						".attr #2":{
+							action:"removeClass",
+							input:["cake"]
+						},
+						".attr #3":{
+							action:"removeClass",
+							input:["cake toast"]
+						},
+						".attr #4":{
+							action:"attr",
+							input:["data-test","testFace"]
 						}
 					}
 				},

@@ -74,6 +74,13 @@ module.exports = function(grunt) {
 						".attr #4":{
 							action:"attr",
 							input:["data-test","testFace"]
+						},
+						".append .me": {
+							action:"remove"
+						},
+						".append .you": {
+							action:"append",
+							input:["<a href='blah'></a>"]
 						}
 					}
 				},

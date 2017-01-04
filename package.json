@@ -27,7 +27,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "cheerio": "0.14.0"
+    "cheerio": "0.22.0"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.6.0",

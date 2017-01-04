@@ -38,7 +38,7 @@ exports.dom_massager = {
 		console.log("idface:"+grunt.config("dom.read.idface"));
 
 
-		test.equal( grunt.config.get("dom.read.classy"), "<span>i'm classy</span>");
+		test.equal( grunt.config.get("dom.read.classy"), "<span>im classy</span>");
 		test.equal( grunt.config.get("dom.read.idface"), "i have an id");
 
 		test.done();

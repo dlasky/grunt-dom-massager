@@ -36,9 +36,13 @@ module.exports = function(grunt) {
 				}
 
 			}).map(function(filepath) {
+				var fls = null;
+				if (typeof f.src !== "string") {
+					fls = f.src.map(function(f) { return path.basename(f); });
+				}
 				return {
 					html: grunt.file.read(filepath),
-					file: path.basename(f.src),
+					file: fls || path.basename(f.src),
 				};
 			});
 

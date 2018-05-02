@@ -20,8 +20,9 @@ module.exports = function(grunt) {
 			writeDom: false,
 			xmlMode: false,
 			normalizeWhitespace: false,
-			selectors:{},
-			cheerioHook:null
+			decodeEntities: true,
+			selectors: {},
+			cheerioHook: null
 		});
 
 		this.files.forEach(function(f) {
@@ -52,7 +53,8 @@ module.exports = function(grunt) {
 					output,
 					$ = cheerio.load(obj.html, {
 						xmlMode: options.xmlMode,
-						normalizeWhitespace: options.normalizeWhitespace
+						normalizeWhitespace: options.normalizeWhitespace,
+						decodeEntities: options.decodeEntities
 					});
 
 				for(i in options.selectors) {
